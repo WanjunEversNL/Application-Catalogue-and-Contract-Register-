@@ -1,0 +1,12 @@
+# Databricks Apps configuration. Edit the two placeholders, then deploy.
+command: ["streamlit", "run", "app.py"]
+env:
+  - name: CATALOGUE_BACKEND
+    value: "databricks"
+  - name: CATALOGUE_CATALOG
+    value: "<your_catalog>"
+  - name: CATALOGUE_SCHEMA
+    value: "<your_schema>"
+  # Add a SQL warehouse as an app resource with the key "sql-warehouse" (Apps UI > Configure > Resources)
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: "sql-warehouse"

@@ -1,0 +1,6 @@
+# For deployment as a Databricks App (some packages are pre-installed there)
+streamlit>=1.40
+pandas>=2.1
+openpyxl>=3.1
+databricks-sql-connector>=3.0
+databricks-sdk
